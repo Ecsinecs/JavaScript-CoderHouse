@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+.grid {
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+  display: grid;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 3rem 0;
+}
+
+.header {
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  grid-area: header;
+}
+.header .header__icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+.header .header__cart {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+main {
+  text-align: center;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+}
+
+.disclaimer {
+  padding-bottom: 2rem;
+}
+
+.tabla {
+  align-self: center;
+  margin-top: 1rem;
+  border: 1px solid whitesmoke;
+  max-width: 600px;
+  min-width: 600px;
+  padding: 1rem;
+}
+.tabla .tabla__fila1 {
+  background-color: rgb(52, 52, 52);
+}
+.tabla .tabla__generado:nth-child(2n) {
+  background-color: rgb(45, 45, 45);
+}
+
+.tabla__titulo {
+  font-size: 2rem;
+}
+
+.card {
+  width: 250px;
+  height: 440px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(23, 23, 23);
+}
+.card .card__img {
+  width: 100%;
+  height: 250px;
+  border-bottom: 1px solid whitesmoke;
+}
+.card .card__title {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.card .card__desc {
+  padding: 0rem 1rem 1rem 1rem;
+}
+.card .card__button {
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  background-color: rgb(34, 34, 34);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  transition: all 0.5s;
+}
+.card .card__button:hover {
+  background-color: rgb(52, 52, 52);
+  box-shadow: 0px 0px 5px white;
+}
+
+.card__row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.containerCart {
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-width: 550px;
+  align-self: center;
+  border-radius: 5px;
+}
+.containerCart h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.containerCart .containerCart__card {
+  display: flex;
+  height: 100px;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  border: 1px solid whitesmoke;
+}
+.containerCart .containerCart__img {
+  width: 100px;
+  height: 98px;
+}
+.containerCart .containerCart__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160.41px;
+}
+.containerCart .containerCart__div p {
+  margin: 0.2rem 1rem;
+}
+.containerCart .containerCart__Btn {
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  background-color: rgb(34, 34, 34);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  max-width: max-content;
+  transition: all 0.5s;
+}
+.containerCart .containerCart__Btn:hover {
+  background-color: rgb(52, 52, 52);
+  box-shadow: 0px 0px 5px white;
+}
+
+.footer {
+  background-color: rgb(23, 23, 23);
+  text-align: center;
+  grid-area: footer;
+  padding: 0.5rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */
