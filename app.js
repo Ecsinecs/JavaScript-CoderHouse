@@ -120,19 +120,32 @@ function eraseCart () {
 let buyBtn = document.getElementById("buy")
 
 buyBtn.addEventListener(`click`, () => {
- Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: '¡Compra exitosa!',
-  text: `Se realizó su compra por un total de $${total}`,
-  showConfirmButton: false,
-  timer: 2000
-})
-eraseCart()
+  if (carrito.length === 0) {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'No hay productos en el carrito.',
+      showConfirmButton: false,
+      timer: 1350
+    })
+   }
+   else {
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: '¡Compra exitosa!',
+      text: `Se realizó su compra por un total de $${total}`,
+      showConfirmButton: false,
+      timer: 2000
+    })
+    eraseCart()
+   }
 })
 
 //localStorage
 carrito = JSON.parse(localStorage.getItem("localCart")) || []
 updateCart()
 
-total = JSON.parse(localStorage.getItem("localTotal"))  
+total = JSON.parse(localStorage.getItem("localTotal"))
+
