@@ -85,7 +85,26 @@ const updateCart = () => {
 let eraseBtn = document.getElementById("erase")
 
 eraseBtn.addEventListener(`click`, () => {
-  eraseCart()
+  Swal.fire({
+    title: '¿Desea eliminar los productos del carrito?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#FF0A2E',
+    cancelButtonColor: '#0AFF94',
+    confirmButtonText: '¡Eliminalos!',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Carrito eliminado.',
+        showConfirmButton: false,
+        timer: 1350
+      })
+      eraseCart()
+    }
+  })
 })
 
 function eraseCart () {
@@ -101,7 +120,15 @@ function eraseCart () {
 let buyBtn = document.getElementById("buy")
 
 buyBtn.addEventListener(`click`, () => {
- alert(`¡Compra exitosa! se realizó su compra por un total de $${total}`)
+ Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: '¡Compra exitosa!',
+  text: `Se realizó su compra por un total de $${total}`,
+  showConfirmButton: false,
+  timer: 2000
+})
+eraseCart()
 })
 
 //localStorage
