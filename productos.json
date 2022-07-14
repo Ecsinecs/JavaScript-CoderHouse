@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ají Morrón",
+    "desc": "Un kilo de pimiento dulce/Ají Morrón natural y fresco.",
+    "price": 760,
+    "img": "./assets/img/aji.jpg"
+  },
+  {
+    "name": "Berenjena",
+    "desc": "Un kilo de berenjena natural y fresca.",
+    "price": 640,
+    "img": "./assets/img/berenjena.jpg"
+  },
+  {
+    "name": "Boniato",
+    "desc": "Un kilo de boniato natural fresco.",
+    "price": 465,
+    "img": "./assets/img/boniato.jpg"
+  },
+  {
+    "name": "Brocoli",
+    "desc": "Un kilo de brocoli natural fresco.",
+    "price": 540,
+    "img": "./assets/img/brocoli.jpg"
+  },
+  {
+    "name": "Calabacín",
+    "desc": "Un kilo de calabacín natural fresco.",
+    "price": 430,
+    "img": "./assets/img/calabacin.jpg"
+  },
+  {
+    "name": "Cebolla",
+    "desc": "Un kilo de cebolla natural sin quimicos.",
+    "price": 420,
+    "img": "./assets/img/cebolla.jpg"
+  },
+  {
+    "name": "Coles de Brucelas",
+    "desc": "500 gramos de coles de brucelas naturales frescas.",
+    "price": 370,
+    "img": "./assets/img/coles de brucelas.jpg"
+  },
+  {
+    "name": "Espinaca",
+    "desc": "Dos kilos de espinaca natural sin quimicos.",
+    "price": 670,
+    "img": "./assets/img/espinaca.jpg"
+  },
+  {
+    "name": "Tomate",
+    "desc": "Un kilo de tomate natural fresco sin quimicos.",
+    "price": 560,
+    "img": "./assets/img/tomate.jpg"
+  },
+  {
+    "name": "Zanahoria",
+    "desc": "Dos kilos de zanahoria natural fresca.",
+    "price": 520,
+    "img": "./assets/img/zanahoria.jpg"
+  }
+]

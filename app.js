@@ -14,20 +14,20 @@ class Productos {
 //Array de los productos
 const productos = [];
 
-productos.push(new Productos("Ají Morrón", "Un kilo de pimiento dulce/Ají Morrón natural y fresco.", 760, "./assets/img/aji.jpg"));
-productos.push(new Productos("Berenjena", "Un kilo de berenjena natural y fresca.", 640, "./assets/img/berenjena.jpg"));
-productos.push(new Productos("Boniato", "Un kilo de boniato natural fresco.", 465, "./assets/img/boniato.jpg"));
-productos.push(new Productos("Brocoli", "Un kilo de brocoli natural fresco.", 540, "./assets/img/brocoli.jpg"));
-productos.push(new Productos("Calabacín", "Un kilo de calabacín natural fresco.", 430, "./assets/img/calabacin.jpg"));
-productos.push(new Productos("Cebolla", "Un kilo de cebolla natural sin quimicos.", 420, "./assets/img/cebolla.jpg"));
-productos.push(new Productos("Coles de Brucelas", "500 gramos de coles de brucelas naturales frescas.", 370, "./assets/img/coles de brucelas.jpg"));
-productos.push(new Productos("Espinaca", "Dos kilos de espinaca natural sin quimicos.", 670, "./assets/img/espinaca.jpg"));
-productos.push(new Productos("Tomate", "Un kilo de tomate natural fresco sin quimicos.", 560, "./assets/img/tomate.jpg"));
-productos.push(new Productos("Zanahoria", "Dos kilos de zanahoria natural fresca.", 520, "./assets/img/zanahoria.jpg"));
-
 let container = document.getElementById("container")
 
+//Obtener productos
+const obtenerProductos = async ()=>{
+  const resp = await fetch("./productos.json")
+  const data = await resp.json();
+  data.forEach(el => {
+    productos.push(new Productos(el.name, el.desc, el.price, el.img))
+  })
+  mostrarDOM()
+}
+
 //For of del DOM y evento del botón comprar para añadir al carrito
+function mostrarDOM (){
 for (const producto of productos) {
     let div = document.createElement("div")
     div.className = "card"
@@ -46,6 +46,7 @@ for (const producto of productos) {
     btn.addEventListener(`click`, () => {
       addCart(producto.name)
     })
+}
 }
 
 
@@ -149,3 +150,6 @@ updateCart()
 
 total = JSON.parse(localStorage.getItem("localTotal"))
 
+//Obtiene los productos y los muestra en el html
+obtenerProductos()
+mostrarDOM()
